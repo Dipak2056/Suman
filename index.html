@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ramayana</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="result">
+        Your score
+        <p id="result">0</p>
+      </div>
+      <div class="gameSection">
+        <div class="rama">
+          <p>Ram</p>
+          <input
+            type="text"
+            name="myinput"
+            id="myinput"
+            onchange="checkSimilarity()"
+          />
+          <p id="myWritting"></p>
+        </div>
+        <div class="ravana">
+          <p>ravana</p>
+          <p class="randomword"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
