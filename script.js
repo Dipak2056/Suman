@@ -1,6 +1,7 @@
 const apiurl = "https://randomuser.me/api/?";
 const wordelm = document.querySelector(".randomword");
 const myWritting = document.getElementById("myWritting");
+let timing = 5000;
 const fetchWord = () => {
   fetch(apiurl)
     .then((response) => response.json())
@@ -38,6 +39,9 @@ function checkSimilarity() {
 function changeResult() {
   let myresult = document.getElementById("result");
   myresult.innerText = count;
+  if (count > 5) {
+    timing = 3000;
+  }
 }
 function clearValue() {
   document.getElementById("myinput").value = "";
@@ -50,3 +54,7 @@ function displayCorrect() {
   document.getElementById("myinput").style.background = "white";
   document.getElementById("result").style.color = "black";
 }
+function getFetchedWord() {
+  setInterval(fetchWord, timing);
+}
+getFetchedWord();

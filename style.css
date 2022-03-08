@@ -37,4 +37,15 @@ input {
 }
 .randomword {
   color: aquamarine;
+  height: 50px;
+  width: 50px;
+  animation: diagonal 5s infinite;
+}
+@keyframes diagonal {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(200px) translateY(200px);
+  }
 }
