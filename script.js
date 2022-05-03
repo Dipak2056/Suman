@@ -1,60 +1,8 @@
-const apiurl = "https://randomuser.me/api/?";
-const wordelm = document.querySelector(".randomword");
-const myWritting = document.getElementById("myWritting");
-let timing = 5000;
-const fetchWord = () => {
-  fetch(apiurl)
-    .then((response) => response.json())
-    .then((data) => {
-      words = data.results;
+const sections = document.querySelectorAll(".section");
+const secBtns = document.querySelectorAll(".controls");
+const sectBtn = document.querySelectorAll(".control");
+const allSection = document.querySelectorAll(".main-content");
 
-      let str = "";
-      words.map((word) => {
-        str += `<p>${word.name.first}</p>`;
-      });
-      wordelm.innerHTML = str;
-    });
-};
-fetchWord();
-
-//to check for the similarness
-let count = 0;
-function checkSimilarity() {
-  const target = wordelm.innerText;
-  let iWrote = document.getElementById("myinput").value;
-  if (target === iWrote) {
-    fetchWord();
-    count++;
-    changeResult();
-    clearValue();
-    displayCorrect();
-  } else {
-    fetchWord();
-    count--;
-    changeResult();
-    clearValue();
-    displaywrong();
-  }
+function pageTransition() {
+  //button click active class
 }
-function changeResult() {
-  let myresult = document.getElementById("result");
-  myresult.innerText = count;
-  if (count > 5) {
-    timing = 3000;
-  }
-}
-function clearValue() {
-  document.getElementById("myinput").value = "";
-}
-function displaywrong() {
-  document.getElementById("myinput").style.background = "pink";
-  document.getElementById("result").style.color = "red";
-}
-function displayCorrect() {
-  document.getElementById("myinput").style.background = "white";
-  document.getElementById("result").style.color = "black";
-}
-function getFetchedWord() {
-  setInterval(fetchWord, timing);
-}
-getFetchedWord();
