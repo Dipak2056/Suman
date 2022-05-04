@@ -304,6 +304,58 @@ img {
     }
   }
 }
+//contact
+.contact-content-con {
+  display: flex;
+  padding-top: 3.5rem;
+  .left-contact {
+    flex: 2;
+    h4 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+      p {
+        margin: 1rem;
+        line-height: 2rem;
+      }
+      .contact-info {
+        .contact-item {
+        }
+      }
+    }
+  }
+  .right-contact {
+    flex: 3;
+    margin-left: 3rem;
+    .input-control {
+      margin: 1.5rem 0;
+      input,
+      textarea {
+        border-radius: 30px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: 0.8rem 1rem;
+        outline: none;
+        border: none;
+        background-color: var(--color-grey-5);
+        width: 100%;
+        color: white;
+        resize: none;
+      }
+    }
+    .ic-2 {
+      display: flex;
+      :last-child {
+        margin-left: 1.5rem;
+      }
+    }
+    .submit-btn {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
 .portfolio-item:hover .hover-items {
   opacity: 1;
   transform: scale(1);
